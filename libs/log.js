@@ -3,7 +3,6 @@ var winston = require('winston');
 winston.emitErrs = true;
 
 function logger(module) {
-
     return new winston.Logger({
         transports : [
             new winston.transports.File({
@@ -11,7 +10,7 @@ function logger(module) {
                 filename: process.cwd() + '/logs/all.log',
                 handleException: true,
                 json: true,
-                maxSize: 5242880, //5mb 
+                maxSize: 5242880, //5Mb 
                 maxFiles: 2, 
                 colorize: false
             }),
@@ -28,7 +27,6 @@ function logger(module) {
 }
 
 function getFilePath (module ) {
-    //using filename in log statements
     return module.filename.split('/').slice(-2).join('/');
 }
 

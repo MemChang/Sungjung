@@ -1,12 +1,12 @@
-var mongoose = require('mongoose'),
-	Schema = mongoose.Schema,
+var mongoose = require('mongoose');
 
-	Client = new Schema({
-		name: {
-			type: String,
-			unique: true,
-			required: true
-		}
-	});
+var Schema = mongoose.Schema;
+var Client = new Schema({
+    name: {
+	type: String,
+	unique: true,
+	required: true		
+    }
+});
 
 module.exports = mongoose.model('Client', Client);
