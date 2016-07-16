@@ -1,0 +1,14 @@
+{
+    "port": 1337,
+    "mongoose": {
+        "uri": "mongodb://localhost:27017/item"
+    },
+    "default": {
+        "api": {
+            "version" : "v1"
+        },
+        "client": {
+            "name": "SungjungKim"
+        }
+    }
+}
